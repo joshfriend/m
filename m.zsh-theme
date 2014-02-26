@@ -20,7 +20,7 @@ m_git_branch () {
 
 m_git_status1() {
   # Show ahead/behind status
-  _INDEX=$(command git status -uno --porcelain -b 2> /dev/null)
+  _INDEX=$(command git status -uno --porcelain -sb 2> /dev/null)
   _STATUS=""
   if $(echo "$_INDEX" | grep '^## .*behind' &> /dev/null); then
     _STATUS="$_STATUS$ZSH_THEME_GIT_PROMPT_BEHIND"
@@ -42,7 +42,7 @@ m_git_status1() {
 
 m_git_status2 () {
   # Show working copy/staged changes status
-  _INDEX=$(command git status -uno --porcelain -b 2> /dev/null)
+  _INDEX=$(command git status -uno --porcelain -sb 2> /dev/null)
   _STATUS=""
   if $(echo "$_INDEX" | grep '^[AMRD]. ' &> /dev/null); then
     _STATUS="$_STATUS$ZSH_THEME_GIT_PROMPT_STAGED"
