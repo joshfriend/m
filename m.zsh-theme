@@ -88,7 +88,7 @@ fi
 # Add 'user@hostname' in ssh session
 _USERNAME=""
 if [[ -n $SSH_CONNECTION ]]; then
-  _USERNAME="%{$bg[white]%}%{$fg[white]%}%n@%m%{$reset_color%}:"
+  _USERNAME="%{$bg[white]%}%{$fg[black]%}%n@%m%{$reset_color%}:"
 fi
 
 _PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
