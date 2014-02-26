@@ -11,6 +11,8 @@
     - Ahead/Behind state
     - Working copy state (staged/unstaged/clean/unmerged/stashed)
 
+![screenshot](screenshot.jpg)
+
 ## Requirements
 
 * `zsh`
