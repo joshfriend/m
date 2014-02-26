@@ -20,9 +20,9 @@
 
 ## Installation
 
-Copy the theme file:
+Create a symlink to the theme file:
 
-    cp m.zsh-theme ~/.oh-my-zsh/themes
+    $ ln -s path/to/m.zsh-theme ~/.oh-my-zsh/themes
 
 And change your chosen theme in your `.zshrc` file:
 
