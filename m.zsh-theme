@@ -79,21 +79,23 @@ m_git_prompt () {
   echo $_result
 }
 
-_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
-
-if [[ "%#" == "#" ]]; then
-  _USERNAME="%{$fg_bold[red]%}%n"
-  _LIBERTY="%{$fg[red]%}#"
+if [[ $(id -u) == 0 ]]; then
+  _LIBERTY="%{$fg[red]%}#%{$reset_color%}"
 else
-  _USERNAME="%{$fg_bold[white]%}%n"
-  _LIBERTY="%{$fg[green]%}$"
+  _LIBERTY="%{$fg[green]%}$%{$reset_color%}"
 fi
-_USERNAME="$_USERNAME%{$reset_color%}@%m"
-_LIBERTY="$_LIBERTY%{$reset_color%}"
+
+# Add 'user@hostname' in ssh session
+_USERNAME=""
+if [[ -n $SSH_CONNECTION ]]; then
+  _USERNAME="%{$bg[white]%}%{$fg[white]%}%n@%m%{$reset_color%}:"
+fi
+
+_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
 
 setopt prompt_subst
 PROMPT='
-$_PATH
+$_USERNAME$_PATH
 $_LIBERTY '
 RPROMPT='$(m_git_prompt)'
 
