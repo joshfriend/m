@@ -5,10 +5,10 @@
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[white]%}>%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[white]%}<%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg_bold[red]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[yellow]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_STASHED="%{$fg_bold[cyan]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[red]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%}●%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[cyan]%}●%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
 
